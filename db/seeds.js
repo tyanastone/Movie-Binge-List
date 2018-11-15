@@ -1,6 +1,6 @@
 const mongoose = require('./connections')
-const Movie  = require('../models/Movie')
-const User  = require('../models/User')
+const Movie  = require('../Models/Movie.js')
+const User  = require('../Models/User.js')
 
 
 
@@ -58,7 +58,7 @@ const Sarah = new User({
 // you want to re-seed your database
 User.remove({})
     // creating all of these products into the following stores
-    .then(() => Movies.insertMany([Black_Lightning, Naruto_Shippuden, Chewing_Gum]))
+    .then(() => Movie.insertMany([Black_Lightning, Naruto_Shippuden, Chewing_Gum]))
     // created stores and saved them
     .then(() => Mary.save())
     .then(() => John.save())
