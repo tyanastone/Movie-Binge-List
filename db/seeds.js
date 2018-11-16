@@ -57,6 +57,7 @@ const Sarah = new User({
 })
 // you want to re-seed your database
 User.remove({})
+    .then(() => Movie.remove({}))
     // creating all of these products into the following stores
     .then(() => Movie.insertMany([Black_Lightning, Naruto_Shippuden, Chewing_Gum]))
     // created stores and saved them
