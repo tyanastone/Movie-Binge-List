@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 // requiring cotrollers
-const userController = require('../controllers/user')
-const movieController = require('../controllers/movie')
+const userController = require('../Controllers/userController')
+const movieController = require('../Controllers/movieController')
 
 // Routes for Model 1
 // router.get()
