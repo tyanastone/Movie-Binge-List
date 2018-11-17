@@ -130,6 +130,9 @@ class UserPage extends Component {
         <NewMovieButton onClick={this.handleCreateNewMovie}>
           New Movie
         </NewMovieButton>
+            <h3>Want to Watch</h3>
+            <h3>Currently Watching</h3>
+            <h3>Already Watched</h3>
         <IdeasContainerStyle>
           {this.state.movies.map(movie => {
             const deleteMovie = () => {

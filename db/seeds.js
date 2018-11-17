@@ -49,7 +49,7 @@ const John = new User({
     username: "John",
     password: "johnishere",
     image: "https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80",
-    movies: [Naruto_Shippuden]
+    movies: [Naruto_Shippuden, Chewing_Gum]
 })
 
 const Sarah = new User({
