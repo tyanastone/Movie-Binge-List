@@ -7,13 +7,15 @@ import UserPage from "../src/components/UserPage";
 import LoginPage from "../src/components/LoginPage";
 import Profiles from "../src/components/Profiles";
 import ListPage from "../src/components/ListPage";
+import NavBar from "./components/Navbar";
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          {/* add nav bar here */}
+          <NavBar />
+          
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/login" component={LoginPage} />

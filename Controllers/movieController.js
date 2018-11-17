@@ -24,6 +24,20 @@ const movieController = {
             .then(() => {
                 res.send(200)
             })
+    },
+    create: (req, res) => {
+        let userId = req.params.userId
+        User.findById(userId)
+            .then((user) => {
+                console.log(user)
+                Idea.create(req.body)
+                    .then((newMovie) => {
+                        console.log(newMovie)
+                        user.ideas.push(newMovie)
+                        user.save()
+                        res.send(newMovie)
+                    })
+            })
     }
 }
 
