@@ -122,10 +122,19 @@ class UserPage extends Component {
 //     })
 //     // console .log saved
 //   }
+    onDelete() {
+        let userId = this.state.user._id;
+        axios.delete(`http://localhost:3000/api/users/${userId}`)
+            .then(response => {
+            this.props.history.push('/')
+        }).catch(err => console.log(err))
+    }
 
   render() {
-    return (
-      <div>
+      return (
+         
+          <div>
+              <button onClick={this.onDelete.bind(this)}>Delete User</button>
         <h1>{this.state.user.username}'s Movie Page</h1>
         <NewMovieButton onClick={this.handleCreateNewMovie}>
           New Movie
