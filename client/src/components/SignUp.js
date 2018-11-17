@@ -97,7 +97,7 @@ class SignUp extends Component {
               name="password"
             />
           </div>
-          <button type="submit">Create User</button>
+          <button type="submit">Login</button>
         </form>
       </div>
     );
