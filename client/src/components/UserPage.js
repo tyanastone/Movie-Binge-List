@@ -111,14 +111,14 @@ class UserPage extends Component {
     this.setState({movies: updatedVals})
   }
 
-//   handleUpdate = (ideaId) => {
+//   handleUpdate = (userId) => {
 //     // Find the individual updated idea from this.state.ideas
-//     const ideaToUpdate = this.state.ideas.find(idea => {
-//       return idea._id === ideaId
+//     const userToUpdate = this.state.users.find(user => {
+//       return user._id === userId
 //     })
 //     // axios post the endpoint with updated data
-//     axios.patch(`/api/ideas/${ideaId}`, ideaToUpdate).then(() => {
-//       console.log("Updated Idea")  
+//     axios.patch(`/api/users/${userId}`, userToUpdate).then(() => {
+//       console.log("Updated User")  
 //     })
 //     // console .log saved
 //   }
@@ -135,6 +135,8 @@ class UserPage extends Component {
          
           <div>
               <button onClick={this.onDelete.bind(this)}>Delete User</button>
+           
+              {/* <button onClick={EditUser}>Edit User</button> */}
         <h1>{this.state.user.username}'s Movie Page</h1>
         <NewMovieButton onClick={this.handleCreateNewMovie}>
           New Movie

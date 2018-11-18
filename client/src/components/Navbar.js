@@ -30,7 +30,8 @@ class NavBar extends Component {
       <NavBarStyles id="nav-container" class="some-class">
         <Link to="/">Binger.io</Link>
         <div className="right">
-          <Link to="/signUp">Sign-Up</Link>
+                <Link to="/signUp">Sign-Up</Link>
+                <Link to="/users/add">Add List</Link>
         </div>
         
       </NavBarStyles>
