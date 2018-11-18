@@ -6,18 +6,36 @@ import styled from 'styled-components';
 // const ExampleContainer = styled.div`
 
 // `
+const Title = styled.h1`
+display: flex;
+justify-content: center;
+/* align-items: center; */
 
+`
 const Example = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-
+text-decoration: none;
+h1{
+position: absolute;
+color: white;
+top: 10px;
+background-color: hsla(0, 100%, 30%, 0.3);
+/* border: solid white; */
+}
  button {
-    position: absolute;
-    /* top: 100px; */
-    
+    position: absolute;  
+    height: 50px;
+    width: 100px;
+    font-size: large;
+    background-color: #B9090B;
+    border: solid white;
+    color: white;
+   
   }
 `
+
 class HomePage extends Component {
     render() {
         return (
@@ -25,7 +43,10 @@ class HomePage extends Component {
     //    <ExampleContainer>
                 <Example>
                 {/* this is where log in and sign up buttons will be, and movie collage picture */}
-                <button><Link to="/signUp">Sign-Up</Link></button>
+                <Title>
+                    <h1>BINGER.IO</h1>
+                    </Title>
+                <button><Link style={{ textDecoration: 'none' }} to="/signUp">Log In</Link></button>
               
                 <img src={MovieCollage} alt="movies" width="1904"/>
                 </Example>  
