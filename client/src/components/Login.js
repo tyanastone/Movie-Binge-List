@@ -24,10 +24,11 @@ import axios from "axios";
 import { Link } from 'react-router-dom'
 import NavBar from "./Navbar";
 
+
 // TODO: SHOW ALL USERS
 // TODO: CREATE FORM TO CREATE USER
 
-class SignUp extends Component {
+class Login extends Component {
   state = {
     users: [],
     newUser: {
@@ -71,6 +72,7 @@ class SignUp extends Component {
     return (
       <div>
         <NavBar />
+        
         {this.state.users.map((user) => (
           <div key={user._id}>
             <Link to={`/users/${user._id}`}>{user.username}</Link>
@@ -105,4 +107,4 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+export default Login;

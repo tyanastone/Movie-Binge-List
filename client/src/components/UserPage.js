@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 
+import { Card, CardImg, CardText, CardBody,
+    CardTitle,  Button } from 'reactstrap';
+
 // Need info about a user
 // Need info about that users ideas
 
@@ -132,8 +135,9 @@ class UserPage extends Component {
 
   render() {
       return (
-         
+        
           <div>
+              
               <button onClick={this.onDelete.bind(this)}>Delete User</button>
            
               {/* <button onClick={EditUser}>Edit User</button> */}
@@ -141,35 +145,50 @@ class UserPage extends Component {
         <NewMovieButton onClick={this.handleCreateNewMovie}>
           New Movie
         </NewMovieButton>
-            <h3>Want to Watch</h3>
-            <h3>Currently Watching</h3>
-            <h3>Already Watched</h3>
+             
         <IdeasContainerStyle>
           {this.state.movies.map(movie => {
             const deleteMovie = () => {
               return this.handleDelete(movie._id)
             }
 
-            return (
-              <IdeaStyles>
-                <input 
-                  onBlur={() => this.handleUpdate(movie._id)}
-                  onChange={(event) => this.handleChange(event, movie._id)} 
-                  type="text" name="name" 
-                  value={movie.name} 
-                />
-                <textarea 
-                  onBlur={() => this.handleUpdate(movie._id)}
-                  onChange={(event) => this.handleChange(event, movie._id)} 
-                  name="description" 
-                  value={movie.description} 
-                />
-                <button onClick={deleteMovie}>X</button>
-              </IdeaStyles>
-            )
-          })}
-        </IdeasContainerStyle>
-      </div>
+                      return (
+                        
+                        <Card>
+                        <CardImg top width="100%" src="{movie.image}" alt="Card image cap" />
+                        <CardBody>
+                          <CardTitle>{movie.name}</CardTitle>
+                          
+                          <CardText  onBlur={() => this.handleUpdate(movie._id)}
+                                  onChange={(event) => this.handleChange(event, movie._id)} 
+                                  name="description" 
+                                      value={movie.description}>{movie.description}</CardText>
+                          <Button>Button</Button>
+                        </CardBody>
+                      </Card>
+            //   <IdeaStyles>
+            //     <input 
+            //       onBlur={() => this.handleUpdate(movie._id)}
+            //       onChange={(event) => this.handleChange(event, movie._id)} 
+            //       type="text" name="name" 
+            //       value={movie.name} 
+            //     />
+            //     <textarea 
+            //       onBlur={() => this.handleUpdate(movie._id)}
+            //       onChange={(event) => this.handleChange(event, movie._id)} 
+            //       name="description" 
+            //       value={movie.description} 
+            //     />
+            //     <button onClick={deleteMovie}>X</button>
+            //   </IdeaStyles>
+                      )
+                  })}
+                  
+              </IdeasContainerStyle>
+              
+   
+    </div>
+      
     )
   }
 }

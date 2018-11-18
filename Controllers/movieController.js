@@ -30,10 +30,10 @@ const movieController = {
         User.findById(userId)
             .then((user) => {
                 console.log(user)
-                Idea.create(req.body)
+                Movie.create(req.body)
                     .then((newMovie) => {
                         console.log(newMovie)
-                        user.ideas.push(newMovie)
+                        user.movies.push(newMovie)
                         user.save()
                         res.send(newMovie)
                     })

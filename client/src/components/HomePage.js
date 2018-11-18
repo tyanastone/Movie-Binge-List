@@ -46,7 +46,7 @@ class HomePage extends Component {
                 <Title>
                     <h1>BINGER.IO</h1>
                     </Title>
-                <button><Link style={{ textDecoration: 'none' }} to="/signUp">Log In</Link></button>
+                <button><Link style={{ textDecoration: 'none' }} to="/login">Log In</Link></button>
               
                 <img src={MovieCollage} alt="movies" width="1904"/>
                 </Example>  
