@@ -8,34 +8,34 @@ import { Card, CardImg, CardText, CardBody,
 // Need info about a user
 // Need info about that users ideas
 
-const IdeaStyles = styled.div`
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  width: 200px;
-  height: 200px;
-  background: #f1faee;
-  margin: 10px 0;
-  button {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-  }
+// const IdeaStyles = styled.div`
+//   display: flex;
+//   position: relative;
+//   flex-direction: column;
+//   width: 200px;
+//   height: 200px;
+//   background: #f1faee;
+//   margin: 10px 0;
+//   button {
+//     position: absolute;
+//     top: 5px;
+//     right: 10px;
+//   }
 
-  input,
-  textarea {
-    background-color: transparent;
-    border: none;
-  }
+//   input,
+//   textarea {
+//     background-color: transparent;
+//     border: none;
+//   }
 
-  input {
-    height: 30%;
-    font-size: 1.3rem;
-  }
-  textarea {
-    height: 70%;
-  }
-`
+//   input {
+//     height: 30%;
+//     font-size: 1.3rem;
+//   }
+//   textarea {
+//     height: 70%;
+//   }
+// `
 
 const NewMovieButton = styled.button`
   background: #1d3557;
@@ -85,19 +85,19 @@ class UserPage extends Component {
     })
   }
 
-//   handleDelete = ideaId => {
-//     // some unique value
-//     axios.delete(`/api/ideas/${ideaId}`).then(() => {
-//       //Remove the idea with ideaID from this.state.ideas
-//       const newIdeas = [...this.state.ideas]
-//       // Return only ideas that are NOT the id provided
-//       const filtered = newIdeas.filter(idea => {
-//         return idea._id !== ideaId // ! = =
-//       })
-//       // Take filtered data and set it to ideas
-//       this.setState({ideas: filtered})
-//     })
-//   }
+  handleDelete = movieId => {
+    // some unique value
+    axios.delete(`/api/movie/${movieId}`).then(() => {
+      //Remove the idea with ideaID from this.state.ideas
+      const newMovies = [...this.state.movies]
+      // Return only ideas that are NOT the id provided
+      const filtered = newMovies.filter(movie => {
+        return movie._id !== movieId // ! = =
+      })
+      // Take filtered data and set it to ideas
+      this.setState({movies: filtered})
+    })
+  }
 
   handleChange = (event, movieId) => {
     // const name = event.target.name
@@ -162,8 +162,8 @@ class UserPage extends Component {
                           <CardText  onBlur={() => this.handleUpdate(movie._id)}
                                   onChange={(event) => this.handleChange(event, movie._id)} 
                                   name="description" 
-                                      value={movie.description}>{movie.description}</CardText>
-                          <Button>Button</Button>
+                                      value={movie.description}>{movie.year}<br />{movie.description}</CardText>
+                          <Button onClick={deleteMovie}>Delete</Button>
                         </CardBody>
                       </Card>
             //   <IdeaStyles>
