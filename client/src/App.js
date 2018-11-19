@@ -9,6 +9,7 @@ import Profiles from "../src/components/Profiles";
 import ListPage from "../src/components/ListPage";
 // import NavBar from "./components/Navbar";
 import AddList from '../src/components/AddList';
+import EditUser from '../src/components/EditUser';
 import { createGlobalStyle } from 'styled-components'
 
 const Global = createGlobalStyle`
@@ -32,9 +33,11 @@ class App extends Component {
             <Route exact path="/" component={HomePage} />
             {/* <Route exact path="/login" component={LoginPage} /> */}
             <Route exact path="/users/add" component={AddList} />
+            <Route exact path="/users/:userId/edit" component={EditUser} />
             <Route exact path="/users/:userId" component={UserPage} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/profiles" component={Profiles} />
+            
             
             <Route exact path="/lists" component={ListPage} />
             

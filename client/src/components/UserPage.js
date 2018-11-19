@@ -3,8 +3,9 @@ import axios from "axios";
 import styled from "styled-components";
 import add from "../Images/addbutton.png";
 import deleteButton from "../Images/deletebutton.png";
-
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Card, CardTitle, CardText } from "reactstrap";
+// import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Dropdown, DropdownMenu, DropdownToggle } from 'reactstrap';
 import NavBar from "./Navbar";
 
 // Need info about a user
@@ -54,25 +55,36 @@ const IdeasContainerStyle = styled.div`
 `;
 
 class UserPage extends Component {
-
   state = {
     user: {},
-    movies: []
+      movies: [],
+    dropdownOpen: false
   };
-    // constructor(props) {
-    //     super(props);
+//   constructor(props) {
+//       super(props);
+
+//       this.toggle = this.toggle.bind(this);
     
-    //     this.toggle = this.toggle.bind(this);
-    //     this.state = {
-    //       dropdownOpen: false
-    //     };
-    //   }
+//     }
+
+//     toggle() {
+//       this.setState(prevState => ({
+//         dropdownOpen: !prevState.dropdownOpen
+//       }));
+//     }
+    constructor(props) {
+        super(props);
     
-    //   toggle() {
-    //     this.setState(prevState => ({
-    //       dropdownOpen: !prevState.dropdownOpen
-    //     }));
-    //   }
+        this.toggle = this.toggle.bind(this);
+        
+      }
+    
+      toggle() {
+        this.setState({
+          dropdownOpen: !this.state.dropdownOpen
+        });
+      }
+    
   componentDidMount() {
     // make an api call to get one single user
     // On the server URL is '/api/users/:userId'
@@ -170,20 +182,10 @@ class UserPage extends Component {
             };
 
             return (
-                <div>
-                      <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                 <DropdownToggle caret>
-                   Dropdown
-                 </DropdownToggle>
-                 <DropdownMenu>
-                   <DropdownItem header>Header</DropdownItem>
-                   <DropdownItem disabled>Action</DropdownItem>
-                   <DropdownItem>Another Action</DropdownItem>
-                   <DropdownItem divider />
-                   <DropdownItem>Another Action</DropdownItem>
-                 </DropdownMenu>
-               </Dropdown>
-                    {movie.name}
+              <div>
+               
+               
+                    {/* {movie.name}
                     <br/>
                 <img src={movie.image} alt="" width="200" height="200"/>
                 
@@ -194,15 +196,36 @@ class UserPage extends Component {
                   <img
                     src={deleteButton}
                     onClick={deleteMovie}
-                    alt="addbutton"
+                    alt="deletebutton"
                     width="100"
                   />
-                  <img src={add} alt="addbutton" width="100" />
-                
-                </div>
-             
-              );
-            })}
+                  <img src={add} alt="addbutton" width="100" /> */} 
+                <Card body className="text-center">
+                  <CardTitle>{movie.name}</CardTitle>
+                  <CardText>
+                    <img src={movie.image} alt="" width="200" height="200" />
+                  </CardText>
+                        <img src={deleteButton} onClick={deleteMovie} alt="deletebutton" width="50" />
+                        <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+        <DropdownToggle
+          tag="span"
+          onClick={this.toggle}
+          data-toggle="dropdown"
+          aria-expanded={this.state.dropdownOpen}
+        >
+           <img src={add} alt="addbutton" width="50" /> 
+        </DropdownToggle>
+        <DropdownMenu>
+          <div onClick={this.toggle}>Want to Watch</div>
+          <div onClick={this.toggle}>Currently Watched</div>
+          <div onClick={this.toggle}>Already Watched</div>
+          <div onClick={this.toggle}>Create New List</div>
+        </DropdownMenu>
+      </Dropdown>
+                </Card>
+              </div>
+            );
+          })}
         </IdeasContainerStyle>
       </div>
     );
