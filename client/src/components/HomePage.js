@@ -21,7 +21,7 @@ h1{
 position: absolute;
 color: white;
 top: 10px;
-background-color: hsla(0, 100%, 30%, 0.3);
+text-shadow: 2px 2px #B9090B;
 /* border: solid white; */
 }
  button {
@@ -32,7 +32,7 @@ background-color: hsla(0, 100%, 30%, 0.3);
     background-color: #B9090B;
     border: solid white;
     color: white;
-   
+   box-shadow: 2px 2px;
   }
 `
 

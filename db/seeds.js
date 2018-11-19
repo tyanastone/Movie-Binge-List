@@ -43,20 +43,20 @@ const Mary = new User({
     username: "Mary",
     password: "maryishere",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a3fa46375259c39d07d0227e8ade6daa&auto=format&fit=crop&w=500&q=60",
-    movies: [Chewing_Gum]
+    movies: [Naruto_Shippuden, Chewing_Gum, Black_Lightning]
 })
 const John = new User({
     username: "John",
     password: "johnishere",
     image: "https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80",
-    movies: [Naruto_Shippuden, Chewing_Gum]
+    movies: [Naruto_Shippuden, Chewing_Gum, Black_Lightning]
 })
 
 const Sarah = new User({
     name: "Sarah",
     password: "sarahishere",
     image: "https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b4e41a670c097c8fd2834579f5d5958&auto=format&fit=crop&w=500&q=60",
-    movies: [Black_Lightning]
+    movies: [Naruto_Shippuden, Chewing_Gum, Black_Lightning]
 })
 // you want to re-seed your database
 User.remove({})

@@ -3,50 +3,17 @@ import axios from "axios";
 import styled from "styled-components";
 import add from "../Images/addbutton.png";
 import deleteButton from "../Images/deletebutton.png";
-// import { Card, CardTitle, CardText } from "reactstrap";
-import { Card, CardImg, CardText, CardBody, CardLink,
-    CardTitle, CardSubtitle } from 'reactstrap';
+import { Button, Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 
-import { Dropdown, DropdownMenu, DropdownToggle } from 'reactstrap';
+
+// import { Dropdown, DropdownMenu, DropdownToggle } from "reactstrap";
 import NavBar from "./Navbar";
-
-// Need info about a user
-// Need info about that users ideas
-
-// const IdeaStyles = styled.div`
-//   display: flex;
-//   position: relative;
-//   flex-direction: column;
-//   width: 200px;
-//   height: 200px;
-//   background: #f1faee;
-//   margin: 10px 0;
-//   button {
-//     position: absolute;
-//     top: 5px;
-//     right: 10px;
-//   }
-
-//   input,
-//   textarea {
-//     background-color: transparent;
-//     border: none;
-//   }
-
-//   input {
-//     height: 30%;
-//     font-size: 1.3rem;
-//   }
-//   textarea {
-//     height: 70%;
-//   }
-// `
 
 
 const StyledCard = styled.div`
-height: 200px;
-width: 300px;
-`
+  height: 200px;
+  width: 300px;
+`;
 const NewMovieButton = styled.button`
   background: #1d3557;
   color: white;
@@ -64,34 +31,35 @@ const IdeasContainerStyle = styled.div`
 class UserPage extends Component {
   state = {
     user: {},
-      movies: [],
-    dropdownOpen: false
+    movies: [],
+    dropdownOpen: false,
+    popoverOpen: false
   };
-//   constructor(props) {
-//       super(props);
+ 
 
-//       this.toggle = this.toggle.bind(this);
-    
-//     }
+  constructor(props) {
+    super(props);
 
-//     toggle() {
-//       this.setState(prevState => ({
-//         dropdownOpen: !prevState.dropdownOpen
-//       }));
-//     }
-    constructor(props) {
-        super(props);
+    this.toggle = this.toggle.bind(this);
     
-        this.toggle = this.toggle.bind(this);
-        
-      }
-    
-      toggle() {
-        this.setState({
-          dropdownOpen: !this.state.dropdownOpen
-        });
-      }
-    
+  }
+
+  toggle() {
+    this.setState({
+      popoverOpen: !this.state.popoverOpen
+    });
+  }
+  // constructor(props) {
+  //   super(props);
+
+  //   this.toggle = this.toggle.bind(this);
+  // }
+
+  // toggle() {
+  //   this.setState({
+  //     dropdownOpen: !this.state.dropdownOpen
+  //   });
+  // }
   componentDidMount() {
     // make an api call to get one single user
     // On the server URL is '/api/users/:userId'
@@ -162,7 +130,8 @@ class UserPage extends Component {
   //   }
   onDelete() {
     let userId = this.state.user._id;
-    axios.delete(`http://localhost:3000/api/users/${userId}`)
+    axios
+      .delete(`http://localhost:3000/api/users/${userId}`)
       .then(response => {
         this.props.history.push("/profiles");
       })
@@ -170,8 +139,7 @@ class UserPage extends Component {
   }
 
   render() {
-      return (
-        
+    return (
       <div>
         <NavBar />
         <button onClick={this.onDelete.bind(this)}>Delete User</button>
@@ -190,99 +158,23 @@ class UserPage extends Component {
 
             return (
               <div>
-               
-{/*           
-                    {movie.name}
-                    <br/>
+       
+
+  
                 
-                <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle
-          tag="span"
-          onClick={this.toggle}
-          data-toggle="dropdown"
-          aria-expanded={this.state.dropdownOpen}
-        >
-          <img src={movie.image} alt="" width="200" height="300"/>
-        </DropdownToggle>
-        <DropdownMenu>
-          <div onClick={this.toggle}>Want to Watch</div>
-          <div onClick={this.toggle}>Currently Watched</div>
-          <div onClick={this.toggle}>Already Watched</div>
-          <div onClick={this.toggle}>Create New List</div>
-        </DropdownMenu>
-      </Dropdown> */}
-                  
-
-              {/* <br/>
-                  
-                  <img
-                    src={deleteButton}
-                    onClick={deleteMovie}
-                    alt="deletebutton"
-                    width="100"
-                  />
-                  <img src={add} alt="addbutton" width="100" />  */}
-
-
-                     <StyledCard>
-                       <Card>
-        <CardBody>
-          <CardTitle>{movie.name}</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-        </CardBody>
-        <img width="100%" src={movie.image} alt="Card image cap" />
-        <CardBody>
-                      <CardText>{movie.description}</CardText>
-           <CardLink href="#">Card Link</CardLink> 
-           <CardLink href="#">        <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle
-          tag="span"
-          onClick={this.toggle}
-          data-toggle="dropdown"
-          aria-expanded={this.state.dropdownOpen}
-        >
-           <img src={add} alt="addbutton" width="50" /> <img src={deleteButton} onClick={deleteMovie} alt="deletebutton" width="50" />
-        </DropdownToggle>
-        <DropdownMenu>
-          <div onClick={this.toggle}>Want to Watch</div>
-          <div onClick={this.toggle}>Currently Watched</div>
-          <div onClick={this.toggle}>Already Watched</div>
-          <div onClick={this.toggle}>Create New List</div>
-        </DropdownMenu>
-      </Dropdown> </CardLink>
-        </CardBody>
-                        </Card>
-                        </StyledCard>  
-                {/* <Card body className="text-center">
-                  <CardTitle>{movie.name}</CardTitle>
-                  <CardText>
-                    <img src={movie.image} alt="" width="200" height="200" />
-                        </CardText>
-                        
-                        <img src={deleteButton} onClick={deleteMovie} alt="deletebutton" width="50" />
-                        <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle
-          tag="span"
-          onClick={this.toggle}
-          data-toggle="dropdown"
-          aria-expanded={this.state.dropdownOpen}
-        >
-           <img src={add} alt="addbutton" width="50" /> 
-        </DropdownToggle>
-        <DropdownMenu>
-          <div onClick={this.toggle}>Want to Watch</div>
-          <div onClick={this.toggle}>Currently Watched</div>
-          <div onClick={this.toggle}>Already Watched</div>
-          <div onClick={this.toggle}>Create New List</div>
-        </DropdownMenu>
-      </Dropdown>
-                </Card> */}
+        <Button id="Popover1" onClick={this.toggle}>
+        <img width="300" height="300" src={movie.image} alt="Card image cap" />
+        </Button>
+        <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+          <PopoverHeader>{movie.name}</PopoverHeader>
+                  <PopoverBody>{movie.description}</PopoverBody>
+        </Popover>
+      
               </div>
             );
           })}
         </IdeasContainerStyle>
-              </div>
-              
+      </div>
     );
   }
 }

@@ -6,7 +6,7 @@ const NavBarStyles = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #457B9D;
+  background-image: linear-gradient(#8E0E00, #1F1C18);
   height: 50px;
   
   a {
@@ -32,7 +32,7 @@ class NavBar extends Component {
         <div className="right">
                 <Link to="/login">Login</Link>
                 <Link to="/profiles">Profiles</Link>
-                <Link to="/users/add">Add List</Link>
+                
         </div>
         
       </NavBarStyles>
