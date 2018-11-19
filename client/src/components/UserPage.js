@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 
-import { Card, CardImg, CardText, CardBody,
-    CardTitle,  Button } from 'reactstrap';
+import { Card, Button, CardTitle, CardText } from 'reactstrap';
 import NavBar from './Navbar';
 
 // Need info about a user
@@ -155,19 +154,25 @@ class UserPage extends Component {
 
                       return (
                         
-                        <Card>
-                        <CardImg top width="100%" src={movie.image} alt="Card image cap" />
-                        <CardBody>
-                          <CardTitle>{movie.name}</CardTitle>
+                        // <Card>
+                        // <CardImg top width="100%" src={movie.image} alt="Card image cap" />
+                        // <CardBody>
+                        //   <CardTitle>{movie.name}</CardTitle>
                           
-                          <CardText  onBlur={() => this.handleUpdate(movie._id)}
-                                  onChange={(event) => this.handleChange(event, movie._id)} 
-                                  name="description" 
-                                      value={movie.description}>{movie.year}<br />{movie.description}</CardText>
-                          <Button onClick={deleteMovie}>Delete</Button>
-                          <Button>Add to List</Button>
-                        </CardBody>
-                      </Card>
+                        //   <CardText  onBlur={() => this.handleUpdate(movie._id)}
+                        //           onChange={(event) => this.handleChange(event, movie._id)} 
+                        //           name="description" 
+                        //               value={movie.description}>{movie.year}<br />{movie.description}</CardText>
+                        //   <Button onClick={deleteMovie}>Delete</Button>
+                        //   <Button>Add to List</Button>
+                        // </CardBody>
+                        //   </Card>
+                           <Card body className="text-center">
+                           <CardTitle>Special Title Treatment</CardTitle>
+                              <CardText><img src={movie.image} /></CardText>
+                              <input type="text"/>
+                           <Button>Go somewhere</Button>
+                         </Card>
             //   <IdeaStyles>
             //     <input 
             //       onBlur={() => this.handleUpdate(movie._id)}
