@@ -27,7 +27,9 @@ const IdeasContainerStyle = styled.div`
   flex-wrap: wrap;
   align-content: flex-start;
 `;
-
+const transparency = styled.button`
+color: green;
+`
 class UserPage extends Component {
   state = {
     user: {},
@@ -161,10 +163,11 @@ class UserPage extends Component {
        
 
   
-                
+            <transparency>    
         <Button id="Popover1" onClick={this.toggle}>
         <img width="300" height="300" src={movie.image} alt="Card image cap" />
-        </Button>
+                  </Button>
+                  </transparency>
         <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
           <PopoverHeader>{movie.name}</PopoverHeader>
                   <PopoverBody>{movie.description}</PopoverBody>

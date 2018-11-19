@@ -34,11 +34,11 @@ class Profiles extends Component {
       return (
         <div>
               <NavBar />
-          
+             
           {this.state.users.map((user) => (
             <div key={user._id}>
                       <Link to={`/users/${user._id}`}>{user.username}</Link>
-                      
+                      <img src={user.image} alt=""/>
                       <button ><Link to={`/users/${user._id}/edit`}>Edit User</Link></button>
                       {/* <button><EditUser /></button> */}
             </div>
