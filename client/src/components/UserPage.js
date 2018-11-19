@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import { Card, CardImg, CardText, CardBody,
     CardTitle,  Button } from 'reactstrap';
+import NavBar from './Navbar';
 
 // Need info about a user
 // Need info about that users ideas
@@ -137,7 +138,7 @@ class UserPage extends Component {
       return (
         
           <div>
-              
+              <NavBar />
               <button onClick={this.onDelete.bind(this)}>Delete User</button>
            
               {/* <button onClick={EditUser}>Edit User</button> */}
@@ -155,7 +156,7 @@ class UserPage extends Component {
                       return (
                         
                         <Card>
-                        <CardImg top width="100%" src="{movie.image}" alt="Card image cap" />
+                        <CardImg top width="100%" src={movie.image} alt="Card image cap" />
                         <CardBody>
                           <CardTitle>{movie.name}</CardTitle>
                           
@@ -164,6 +165,7 @@ class UserPage extends Component {
                                   name="description" 
                                       value={movie.description}>{movie.year}<br />{movie.description}</CardText>
                           <Button onClick={deleteMovie}>Delete</Button>
+                          <Button>Add to List</Button>
                         </CardBody>
                       </Card>
             //   <IdeaStyles>
