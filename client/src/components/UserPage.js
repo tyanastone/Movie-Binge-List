@@ -225,12 +225,12 @@ class UserPage extends Component {
 
 
                      <StyledCard>
-                       <Card>
+                       
         <CardBody>
           <CardTitle>{movie.name}</CardTitle>
           <CardSubtitle>Card subtitle</CardSubtitle>
         </CardBody>
-        <img width="100%" src={movie.image} alt="Card image cap" />
+        <img width="300" height="300" src={movie.image} alt="Card image cap" />
         <CardBody>
                       <CardText>{movie.description}</CardText>
            <CardLink href="#">Card Link</CardLink> 
@@ -251,7 +251,7 @@ class UserPage extends Component {
         </DropdownMenu>
       </Dropdown> </CardLink>
         </CardBody>
-                        </Card>
+                        
                         </StyledCard>  
                 {/* <Card body className="text-center">
                   <CardTitle>{movie.name}</CardTitle>
