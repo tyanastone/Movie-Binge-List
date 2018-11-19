@@ -27,8 +27,9 @@ const IdeasContainerStyle = styled.div`
   flex-wrap: wrap;
   align-content: flex-start;
 `;
-const transparency = styled.button`
-color: green;
+
+const transparency = styled.div`
+background: #8E0E00;
 `
 class UserPage extends Component {
   state = {
