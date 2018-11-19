@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 
-import { Card, Button, CardTitle, CardText } from 'reactstrap';
+import { Card, Button, CardImg, CardTitle, CardText, CardGroup,
+    CardSubtitle, CardBody } from 'reactstrap';
 import NavBar from './Navbar';
 
 // Need info about a user
@@ -167,27 +168,16 @@ class UserPage extends Component {
                         //   <Button>Add to List</Button>
                         // </CardBody>
                         //   </Card>
-                           <Card body className="text-center">
-                           <CardTitle>Special Title Treatment</CardTitle>
-                              <CardText><img src={movie.image} /></CardText>
-                              <input type="text"/>
-                           <Button>Go somewhere</Button>
-                         </Card>
-            //   <IdeaStyles>
-            //     <input 
-            //       onBlur={() => this.handleUpdate(movie._id)}
-            //       onChange={(event) => this.handleChange(event, movie._id)} 
-            //       type="text" name="name" 
-            //       value={movie.name} 
-            //     />
-            //     <textarea 
-            //       onBlur={() => this.handleUpdate(movie._id)}
-            //       onChange={(event) => this.handleChange(event, movie._id)} 
-            //       name="description" 
-            //       value={movie.description} 
-            //     />
-            //     <button onClick={deleteMovie}>X</button>
-            //   </IdeaStyles>
+                        <Card>
+                        <CardImg src={movie.image} alt="Card image cap" />
+                        <CardBody>
+                          <CardTitle>Card title</CardTitle>
+                          <CardSubtitle>Card subtitle</CardSubtitle>
+                          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                          <Button>Button</Button>
+                        </CardBody>
+                      </Card>
+            
                       )
                   })}
                   
