@@ -58,15 +58,15 @@ class Login extends Component {
     // when we get that data back, we need to navigate to the new users page
   };
 
-  getAllUsers = () => {
-    axios.get("/api/users").then(res => {
-      this.setState({ users: res.data });
-    });
-  };
+  // getAllUsers = () => {
+  //   axios.get("/api/users").then(res => {
+  //     this.setState({ users: res.data });
+  //   });
+  // };
 
-  componentDidMount() {
-    this.getAllUsers();
-  }
+  // componentDidMount() {
+  //   this.getAllUsers();
+  // }
 
   render() {
     return (
@@ -79,7 +79,7 @@ class Login extends Component {
           </div>
         ))}
 
-        <h3>Sign Up: </h3>
+        <h3>Log In: </h3>
 
         <form onSubmit={this.handleSubmit}>
           <div>

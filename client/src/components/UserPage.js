@@ -156,7 +156,7 @@ class UserPage extends Component {
                       return (
                         
                         <Card>
-                        <CardImg src={movie.image} alt="Card image cap" />
+                        <CardImg src={movie.image} width="200" alt="Card image cap" />
                         <CardBody>
                           <CardTitle>{movie.name}</CardTitle>
                           

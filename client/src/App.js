@@ -18,7 +18,7 @@ const Global = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Allerta Stencil', sans-serif;
-    
+    /* background-color: #1C242C */
   }
 `
 class App extends Component {
