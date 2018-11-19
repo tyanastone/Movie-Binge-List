@@ -3,16 +3,8 @@ import axios from "axios";
 import styled from "styled-components";
 import add from "../Images/addbutton.png";
 import deleteButton from "../Images/deletebutton.png";
-import {
-  Card,
-  Button,
-  CardImg,
-  CardTitle,
-  CardText,
-  CardGroup,
-  CardSubtitle,
-  CardBody
-} from "reactstrap";
+
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import NavBar from "./Navbar";
 
 // Need info about a user
@@ -62,11 +54,25 @@ const IdeasContainerStyle = styled.div`
 `;
 
 class UserPage extends Component {
+
   state = {
     user: {},
     movies: []
   };
-
+    // constructor(props) {
+    //     super(props);
+    
+    //     this.toggle = this.toggle.bind(this);
+    //     this.state = {
+    //       dropdownOpen: false
+    //     };
+    //   }
+    
+    //   toggle() {
+    //     this.setState(prevState => ({
+    //       dropdownOpen: !prevState.dropdownOpen
+    //     }));
+    //   }
   componentDidMount() {
     // make an api call to get one single user
     // On the server URL is '/api/users/:userId'
@@ -164,10 +170,22 @@ class UserPage extends Component {
             };
 
             return (
-              <div>
+                <div>
+                      <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                 <DropdownToggle caret>
+                   Dropdown
+                 </DropdownToggle>
+                 <DropdownMenu>
+                   <DropdownItem header>Header</DropdownItem>
+                   <DropdownItem disabled>Action</DropdownItem>
+                   <DropdownItem>Another Action</DropdownItem>
+                   <DropdownItem divider />
+                   <DropdownItem>Another Action</DropdownItem>
+                 </DropdownMenu>
+               </Dropdown>
                     {movie.name}
                     <br/>
-                <img src={movie.image} alt="" width="200" />
+                <img src={movie.image} alt="" width="200" height="200"/>
                 
                   
 
@@ -180,8 +198,9 @@ class UserPage extends Component {
                     width="100"
                   />
                   <img src={add} alt="addbutton" width="100" />
-              
-              </div>
+                
+                </div>
+             
               );
             })}
         </IdeasContainerStyle>
