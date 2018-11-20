@@ -40,7 +40,9 @@ class EditUser extends Component {
       };
     render() {
         return (
+            
             <div>
+                <h1 className="title">Edit Your Profile Login</h1>
                 <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="username">User Name: </label>
@@ -59,7 +61,16 @@ class EditUser extends Component {
               type="password"
               name="password"
             />
-          </div>
+                    </div>
+                    <div>
+                    <label htmlFor="image">User Image: </label>
+            <input
+              onChange={this.handleChange}
+              value={this.state.newUser.image}
+              type="text"
+              name="image"
+            />
+                    </div>
           <button type="submit">Edit User</button>
         </form>
             </div>

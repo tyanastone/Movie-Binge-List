@@ -19,7 +19,7 @@ const movieController = {
             })
     },
     delete: (req, res) => {
-        let movieId = req.params.ideaId
+        let movieId = req.params.movieId
         Movie.findByIdAndDelete(movieId)
             .then(() => {
                 res.send(200)

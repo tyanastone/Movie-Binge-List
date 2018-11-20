@@ -10,21 +10,24 @@ import ListPage from "../src/components/ListPage";
 // import NavBar from "./components/Navbar";
 import AddList from '../src/components/AddList';
 import EditUser from '../src/components/EditUser';
-import { createGlobalStyle } from 'styled-components'
+// import { createGlobalStyle } from 'styled-components'
 import styled from 'styled-components';
+import './index.css';
+// import img from './Images/TexurVol2/Texur-13.jpg'
 
-const Global = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
+// const Global = createGlobalStyle`
+//  @import url('https://fonts.googleapis.com/css?family=Lobster');
   
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Allerta Stencil', sans-serif;
-    /* background-color: #1C242C */
-  }
-`
+//   body {
+//     margin: 0;
+//     padding: 0;
+//     font-family: 'Lobster', cursive;
+//     /* background-color: #1C242C */
+//   }
+// `
 const BodyPage = styled.div`
-background-image: linear-gradient(#8E0E00, #1F1C18);
+/* background-image: linear-gradient(#bdc3c7, #2c3e50); */
+
 height: 100vmax;
 `
 class App extends Component {
@@ -33,7 +36,7 @@ class App extends Component {
       <BodyPage>
       <Router>
         <div>
-        <Global />
+        {/* <Global /> */}
           
           <Switch>
             <Route exact path="/" component={HomePage} />
@@ -50,7 +53,8 @@ class App extends Component {
           </Switch>
         </div>
         </Router>
-        </BodyPage>
+         </BodyPage>
+        
     );
   }
 }

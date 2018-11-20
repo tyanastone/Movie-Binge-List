@@ -33,7 +33,8 @@ class Login extends Component {
     users: [],
     newUser: {
       username: "",
-      password: ""
+      password: "",
+      image: ""
     }
   };
 
@@ -58,15 +59,7 @@ class Login extends Component {
     // when we get that data back, we need to navigate to the new users page
   };
 
-  // getAllUsers = () => {
-  //   axios.get("/api/users").then(res => {
-  //     this.setState({ users: res.data });
-  //   });
-  // };
 
-  // componentDidMount() {
-  //   this.getAllUsers();
-  // }
 
   render() {
     return (
@@ -99,6 +92,15 @@ class Login extends Component {
               type="password"
               name="password"
             />
+            <div>
+           <label htmlFor="image">User Image: </label>
+            <input
+              onChange={this.handleChange}
+              value={this.state.newUser.image}
+              type="text"
+              name="image"
+              />
+              </div>
           </div>
           <button type="submit">Login</button>
         </form>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 import { Link } from 'react-router-dom'
 import NavBar from './Navbar';
-import EditUser from './EditUser';
+import '../index.css'
 // import styled from "styled-components";
 // import EditUser from './EditUser';
 
@@ -34,14 +34,18 @@ class Profiles extends Component {
       return (
         <div>
               <NavBar />
-             
-          {this.state.users.map((user) => (
+             <h1 className="title">Choose Your Profile</h1>
+              {this.state.users.map((user) => (
+               <div className="userContainer">  
             <div key={user._id}>
                       <Link to={`/users/${user._id}`}>{user.username}</Link>
-                      <img src={user.image} alt=""/>
-                      <button ><Link to={`/users/${user._id}/edit`}>Edit User</Link></button>
-                      {/* <button><EditUser /></button> */}
-            </div>
+                      <br/>
+                      <img src={user.image} alt="" height="200" width="200" className="profilePic" />
+                      <br/>
+                      <button ><Link to={`/users/${user._id}/edit`}>Edit Profile</Link></button>
+                  </div>
+                  </div>      
+                      
           ))}
   
           

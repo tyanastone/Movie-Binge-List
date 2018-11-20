@@ -147,7 +147,7 @@ class UserPage extends Component {
         </CardBody>
         <img width="300" height="300" src={movie.image} alt="Card image cap" />
         <CardBody>
-                      <CardText>{movie.description}</CardText>
+                      <CardText></CardText>
            <CardLink href="#">Card Link</CardLink> 
            <CardLink href="#">  <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle

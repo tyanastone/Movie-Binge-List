@@ -6,10 +6,7 @@ const Movie = new Schema({
     image: String,
     year: String,
     description: String,
-    genre: String,
-    want_to_watch: Boolean,
-    currently_watching: Boolean,
-    already_watched: Boolean
+    genre: String
 })
 
 module.exports = mongoose.model('Movie', Movie)

@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import MovieCollage from "../Images/moviecollage.jpg";
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import '../index.css';
 
-// const ExampleContainer = styled.div`
 
-// `
+
 const Title = styled.h1`
 display: flex;
 justify-content: center;
 /* align-items: center; */
 
-`
+`;
 const Example = styled.div`
 display: flex;
 justify-content: center;
@@ -34,23 +34,42 @@ text-shadow: 2px 2px #B9090B;
     color: white;
    box-shadow: 2px 2px;
   }
-`
+`;
 
 class HomePage extends Component {
     render() {
         return (
-            // <div>
-    //    <ExampleContainer>
+  
                 <Example>
-                {/* this is where log in and sign up buttons will be, and movie collage picture */}
+            
                 <Title>
-                    <h1>BINGER.IO</h1>
+                    <h1 className="homeTitle">BINGER.IO</h1>
                     </Title>
-                <button><Link style={{ textDecoration: 'none' }} to="/login">Log In</Link></button>
+                {/* <button><Link style={{ textDecoration: 'none' }} to="/login">Log In</Link></button> */}
               
-                <img src={MovieCollage} alt="movies" width="1904"/>
-                </Example>  
-                // </ExampleContainer> 
+                <img src={MovieCollage} alt="movies" width="1930" className="movieImage" />
+                <div className="wordContainer">
+                <div className="content">
+        <div className="static">
+            <p>My</p>
+            <ul>
+                <li>Movies</li>
+                <li>Shows</li>
+                <li>Fun</li>
+            </ul>
+        </div>
+    </div>
+                </div>
+                <div className="buttonContainer">
+                <div className="wrapper">
+                    <div className="clip-text">
+                    <Link style={{ textDecoration: 'none' }} to="/login">Log In&raquo;</Link>   
+            </div>
+                    </div>
+                    </div>
+            </Example>  
+           
+             
         );
     }
 }
