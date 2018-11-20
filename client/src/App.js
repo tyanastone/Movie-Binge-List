@@ -11,6 +11,7 @@ import ListPage from "../src/components/ListPage";
 import AddList from '../src/components/AddList';
 import EditUser from '../src/components/EditUser';
 import { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components';
 
 const Global = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
@@ -22,9 +23,14 @@ const Global = createGlobalStyle`
     /* background-color: #1C242C */
   }
 `
+const BodyPage = styled.div`
+background-image: linear-gradient(#8E0E00, #1F1C18);
+height: 100vmax;
+`
 class App extends Component {
   render() {
     return (
+      <BodyPage>
       <Router>
         <div>
         <Global />
@@ -43,7 +49,8 @@ class App extends Component {
             
           </Switch>
         </div>
-      </Router>
+        </Router>
+        </BodyPage>
     );
   }
 }

@@ -3,44 +3,12 @@ import axios from "axios";
 import styled from "styled-components";
 import add from "../Images/addbutton.png";
 import deleteButton from "../Images/deletebutton.png";
-// import { Card, CardTitle, CardText } from "reactstrap";
-import { Card, CardImg, CardText, CardBody, CardLink,
+
+import {  CardText, CardBody, CardLink,
     CardTitle, CardSubtitle } from 'reactstrap';
 
 import { Dropdown, DropdownMenu, DropdownToggle } from 'reactstrap';
 import NavBar from "./Navbar";
-
-// Need info about a user
-// Need info about that users ideas
-
-// const IdeaStyles = styled.div`
-//   display: flex;
-//   position: relative;
-//   flex-direction: column;
-//   width: 200px;
-//   height: 200px;
-//   background: #f1faee;
-//   margin: 10px 0;
-//   button {
-//     position: absolute;
-//     top: 5px;
-//     right: 10px;
-//   }
-
-//   input,
-//   textarea {
-//     background-color: transparent;
-//     border: none;
-//   }
-
-//   input {
-//     height: 30%;
-//     font-size: 1.3rem;
-//   }
-//   textarea {
-//     height: 70%;
-//   }
-// `
 
 
 const StyledCard = styled.div`
@@ -67,18 +35,7 @@ class UserPage extends Component {
       movies: [],
     dropdownOpen: false
   };
-//   constructor(props) {
-//       super(props);
 
-//       this.toggle = this.toggle.bind(this);
-    
-//     }
-
-//     toggle() {
-//       this.setState(prevState => ({
-//         dropdownOpen: !prevState.dropdownOpen
-//       }));
-//     }
     constructor(props) {
         super(props);
     
@@ -149,17 +106,7 @@ class UserPage extends Component {
     this.setState({ movies: updatedVals });
   };
 
-  //   handleUpdate = (userId) => {
-  //     // Find the individual updated idea from this.state.ideas
-  //     const userToUpdate = this.state.users.find(user => {
-  //       return user._id === userId
-  //     })
-  //     // axios post the endpoint with updated data
-  //     axios.patch(`/api/users/${userId}`, userToUpdate).then(() => {
-  //       console.log("Updated User")
-  //     })
-  //     // console .log saved
-  //   }
+
   onDelete() {
     let userId = this.state.user._id;
     axios.delete(`http://localhost:3000/api/users/${userId}`)
@@ -190,38 +137,6 @@ class UserPage extends Component {
 
             return (
               <div>
-               
-{/*           
-                    {movie.name}
-                    <br/>
-                
-                <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle
-          tag="span"
-          onClick={this.toggle}
-          data-toggle="dropdown"
-          aria-expanded={this.state.dropdownOpen}
-        >
-          <img src={movie.image} alt="" width="200" height="300"/>
-        </DropdownToggle>
-        <DropdownMenu>
-          <div onClick={this.toggle}>Want to Watch</div>
-          <div onClick={this.toggle}>Currently Watched</div>
-          <div onClick={this.toggle}>Already Watched</div>
-          <div onClick={this.toggle}>Create New List</div>
-        </DropdownMenu>
-      </Dropdown> */}
-                  
-
-              {/* <br/>
-                  
-                  <img
-                    src={deleteButton}
-                    onClick={deleteMovie}
-                    alt="deletebutton"
-                    width="100"
-                  />
-                  <img src={add} alt="addbutton" width="100" />  */}
 
 
                      <StyledCard>
@@ -234,7 +149,7 @@ class UserPage extends Component {
         <CardBody>
                       <CardText>{movie.description}</CardText>
            <CardLink href="#">Card Link</CardLink> 
-           <CardLink href="#">        <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+           <CardLink href="#">  <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle
           tag="span"
           onClick={this.toggle}
@@ -253,30 +168,7 @@ class UserPage extends Component {
         </CardBody>
                         
                         </StyledCard>  
-                {/* <Card body className="text-center">
-                  <CardTitle>{movie.name}</CardTitle>
-                  <CardText>
-                    <img src={movie.image} alt="" width="200" height="200" />
-                        </CardText>
-                        
-                        <img src={deleteButton} onClick={deleteMovie} alt="deletebutton" width="50" />
-                        <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle
-          tag="span"
-          onClick={this.toggle}
-          data-toggle="dropdown"
-          aria-expanded={this.state.dropdownOpen}
-        >
-           <img src={add} alt="addbutton" width="50" /> 
-        </DropdownToggle>
-        <DropdownMenu>
-          <div onClick={this.toggle}>Want to Watch</div>
-          <div onClick={this.toggle}>Currently Watched</div>
-          <div onClick={this.toggle}>Already Watched</div>
-          <div onClick={this.toggle}>Create New List</div>
-        </DropdownMenu>
-      </Dropdown>
-                </Card> */}
+              
               </div>
             );
           })}
