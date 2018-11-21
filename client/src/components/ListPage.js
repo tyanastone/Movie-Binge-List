@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import list from "../Images/list.png";
+import list4 from "../Images/list4.png";
+import list2 from '../Images/list2.png';
+import list3 from '../Images/list3.png';
 import styled from 'styled-components';
+import Navbar from './Navbar';
 
 const hey = styled.div`
 background-color: #1C242C;
@@ -10,14 +13,17 @@ class ListPage extends Component {
     render() {
         return (
             <div>
+                <Navbar />
                 <hey>
                 <h1>Movies/Show Lists</h1>
                 <h3>Want to Watch</h3>
               <div>
-                              <img src={list} alt="list" width="800"/>
+                              <img src={list4} alt="list" width="500"/>
                               </div>
-            <h3>Currently Watching</h3>
+                    <h3>Currently Watching</h3>
+                    <img src={list2} alt="list" width="500"/>
                     <h3>Already Watched</h3>
+                    <img src={list3} alt="list" width="500"/>
                     </hey>
             </div>
         );

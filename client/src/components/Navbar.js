@@ -6,7 +6,8 @@ const NavBarStyles = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(#8E0E00, #1F1C18);
+  /* background-image: linear-gradient(#8E0E00, #1F1C18); */
+  background-color:#1F1C18;
   height: 50px;
   
   a {

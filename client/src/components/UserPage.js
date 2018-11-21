@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
-import add from "../Images/addbutton.png";
-import deleteButton from "../Images/deletebutton.png";
+import add from "../Images/add.png";
+import deleteButton from "../Images/delete.svg";
 import { Link } from "react-router-dom";
 import {  CardText, CardBody, CardLink,
     CardTitle, CardSubtitle } from 'reactstrap';
@@ -128,7 +128,7 @@ class UserPage extends Component {
         <NewMovieButton onClick={this.handleCreateNewMovie}>
           New Movie
         </NewMovieButton>
-
+       
         <IdeasContainerStyle>
           {this.state.movies.map(movie => {
             const deleteMovie = () => {

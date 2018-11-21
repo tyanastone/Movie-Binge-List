@@ -26,9 +26,9 @@ import './index.css';
 //   }
 // `
 const BodyPage = styled.div`
-/* background-image: linear-gradient(#bdc3c7, #2c3e50); */
+background-image: linear-gradient(#eacda3, #d6ae7b);
 
-height: 100vmax;
+height: 400vmax;
 `
 class App extends Component {
   render() {

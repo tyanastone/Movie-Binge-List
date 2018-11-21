@@ -104,8 +104,8 @@ ul li {
     background-image: url(../src/Images/text-bg.jpg);
     background-position: bottom;
     background-size: cover;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
     transition: 2s ease all;
 }
 
