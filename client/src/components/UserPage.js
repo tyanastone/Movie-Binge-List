@@ -8,6 +8,7 @@ import {  CardText, CardBody, CardLink,
     CardTitle, CardSubtitle } from 'reactstrap';
 
 import { Dropdown, DropdownMenu, DropdownToggle } from 'reactstrap';
+import { Button } from 'reactstrap';
 import NavBar from "./Navbar";
 
 
@@ -16,7 +17,7 @@ height: 200px;
 width: 300px;
 `
 const NewMovieButton = styled.button`
-  background: #1d3557;
+  background: maroon;
   color: white;
   font-size: 1.3rem;
   padding: 7.5px 5px;
@@ -121,8 +122,9 @@ class UserPage extends Component {
         
       <div>
         <NavBar />
-        <button onClick={this.onDelete.bind(this)}>Delete User</button>
-
+        {/* <button onClick={this.onDelete.bind(this)}>Delete User</button> */}
+        
+        <Button outline color="danger" onClick={this.onDelete.bind(this)}>Delete User</Button>
         {/* <button onClick={EditUser}>Edit User</button> */}
         <h1>{this.state.user.username}'s Movie Page</h1>
         <NewMovieButton onClick={this.handleCreateNewMovie}>

@@ -21,9 +21,10 @@ text-decoration: none;
 background-size: cover; */
 h1{
 position: absolute;
-color: white;
+color: #ffff9e;
+font-size: 100px;
 top: 10px;
-text-shadow: 2px 2px #B9090B;
+text-shadow: 2px 2px black;
 font-family: 'Monoton', cursive;
 /* border: solid white; */
 }
@@ -46,7 +47,7 @@ font-family: 'Monoton', cursive;
 class HomePage extends Component {
     render() {
         return (
-            // <div className="contentContainer">
+            
             
                 <Example>
             
@@ -73,14 +74,14 @@ class HomePage extends Component {
                         <div className="clip-text">
                             {/* <h1>Login&raquo;</h1> */}
                        
-                            <Link to="/login" style={{textDecoration: 'none'}}>
+                            <Link to="/login" style={{textDecoration: 'none', color: '#ffff9e'}}>
                             Log In&raquo;</Link>   
             </div>
                     </div>
                 </div>
                 <h1 className="homeTitle">BINGER.IO</h1>
             </Example>  
-            // </div>
+         
              
         );
     }

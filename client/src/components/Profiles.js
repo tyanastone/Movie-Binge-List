@@ -40,7 +40,7 @@ class Profiles extends Component {
           {this.state.users.map(user => (
             <div className="userContainer">
               <div key={user._id}>
-                <Link to={`/users/${user._id}`}>{user.username}</Link>
+                <h3 className="title"><Link to={`/users/${user._id}`} style={{textDecoration: 'none', color: 'maroon'}}>{user.username}</Link></h3>
                 <br />
                 <img
                   src={user.image}

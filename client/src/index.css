@@ -14,6 +14,7 @@ background-size: cover;
     float: left;
     overflow: hidden;
     height: 40px;
+    margin: auto;
 }
 
 p {
@@ -85,7 +86,7 @@ ul li {
 
 .wrapper {
     clear: both;
-
+    
     width: 400px;
     margin: 0.5em auto;
 }
@@ -104,7 +105,7 @@ ul li {
     background-image: url(../src/Images/text-bg.jpg);
     background-position: bottom;
     background-size: cover;
-    /* -webkit-background-clip: text; */
+    -webkit-background-clip: text;
     /* -webkit-text-fill-color: transparent; */
     transition: 2s ease all;
 }
@@ -153,6 +154,7 @@ ul li {
     } */
 .wordContainer {
     position: absolute;
+    margin: auto;
 }
 
 .buttonContainer {
@@ -164,3 +166,6 @@ ul li {
     position: relative;
 }
 
+.login{
+    background-image: linear-gradient(#eacda3, #d6ae7b);
+}

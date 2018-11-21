@@ -15,14 +15,14 @@ class ListPage extends Component {
             <div>
                 <Navbar />
                 <hey>
-                <h1>Movies/Show Lists</h1>
-                <h3>Want to Watch</h3>
+                <h1 className="title">Movies & Show Lists</h1>
+                <h3 className="title" style={{color: 'maroon'}}>Want to Watch</h3>
               <div>
                               <img src={list4} alt="list" width="500"/>
                               </div>
-                    <h3>Currently Watching</h3>
+                    <h3 className="title" style={{color: 'maroon'}}>Currently Watching</h3>
                     <img src={list2} alt="list" width="500"/>
-                    <h3>Already Watched</h3>
+                    <h3 className="title" style={{color: 'maroon'}}>Already Watched</h3>
                     <img src={list3} alt="list" width="500"/>
                     </hey>
             </div>

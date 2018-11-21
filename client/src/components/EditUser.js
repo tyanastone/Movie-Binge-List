@@ -47,7 +47,7 @@ class EditUser extends Component {
                 <h1 className="title">Edit Your Profile Login</h1>
                 <form onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor="username">User Name: </label>
+            <label htmlFor="username" style={{color: 'maroon'}}>User Name: </label>
             <input
               onChange={this.handleChange}
               value={this.state.newUser.username}
@@ -56,7 +56,7 @@ class EditUser extends Component {
             />
           </div>
           <div>
-            <label htmlFor="password">Password: </label>
+            <label htmlFor="password" style={{color: 'maroon'}}>Password: </label>
             <input
               onChange={this.handleChange}
               value={this.state.newUser.password}
@@ -65,7 +65,7 @@ class EditUser extends Component {
             />
                     </div>
                     <div>
-                    <label htmlFor="image">User Image: </label>
+                    <label htmlFor="image" style={{color: 'maroon'}}>User Image: </label>
             <input
               onChange={this.handleChange}
               value={this.state.newUser.image}

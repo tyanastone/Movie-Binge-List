@@ -1,28 +1,10 @@
-// import React, { Component } from "react";
 
-// class SignUp extends Component {
-//   render() {
-//     return (
-//         <div>
-//             <h1>Sign Up Page</h1>
-//         <form>
-//           User Name:
-//           <input type="text" name="firstname" value="" />
-//           Password:
-//           <input type="password" name="password" value="" />
-//           <input type="submit" value="Submit" />
-//         </form>
-//       </div>
-//     );
-//   }
-// }
-
-// export default SignUp;
 
 import React, { Component } from "react";
 import axios from "axios";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import NavBar from "./Navbar";
+import login from '../Images/login2.png';
 
 
 // TODO: SHOW ALL USERS
@@ -76,7 +58,7 @@ class Login extends Component {
 
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor="username">User Name: </label>
+            <label htmlFor="username" style={{color: 'maroon'}}>User Name: </label>
             <input
               onChange={this.handleChange}
               value={this.state.newUser.username}
@@ -85,7 +67,7 @@ class Login extends Component {
             />
           </div>
           <div>
-            <label htmlFor="password">Password: </label>
+            <label htmlFor="password" style={{color: 'maroon'}}>Password: </label>
             <input
               onChange={this.handleChange}
               value={this.state.newUser.password}
@@ -93,7 +75,7 @@ class Login extends Component {
               name="password"
             />
             <div>
-           <label htmlFor="image">User Image: </label>
+           <label htmlFor="image" style={{color: 'maroon'}}>User Image: </label>
             <input
               onChange={this.handleChange}
               value={this.state.newUser.image}
@@ -102,7 +84,7 @@ class Login extends Component {
               />
               </div>
           </div>
-          <button type="submit">Login</button>
+          <button type="submit" className="login"><img src={login} alt="login" className="login" width="100" /></button>
         </form>
       </div>
     );
