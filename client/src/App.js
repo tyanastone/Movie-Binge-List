@@ -10,6 +10,7 @@ import ListPage from "../src/components/ListPage";
 // import NavBar from "./components/Navbar";
 import AddList from '../src/components/AddList';
 import EditUser from '../src/components/EditUser';
+import NewMovie from '../src/components/NewMovie';
 // import { createGlobalStyle } from 'styled-components'
 import styled from 'styled-components';
 import './index.css';
@@ -26,9 +27,9 @@ import './index.css';
 //   }
 // `
 const BodyPage = styled.div`
-/* background-image: linear-gradient(#bdc3c7, #2c3e50); */
+background-image: linear-gradient(#8E0E00, #1F1C18);
 
-height: 100vmax;
+height: 300vmax;
 `
 class App extends Component {
   render() {
@@ -39,7 +40,8 @@ class App extends Component {
         {/* <Global /> */}
           
           <Switch>
-            <Route exact path="/" component={HomePage} />
+              <Route exact path="/" component={HomePage} />
+              <Route exact path='/users/:userId/newMovie' component={NewMovie} />
             {/* <Route exact path="/login" component={LoginPage} /> */}
             <Route exact path="/users/add" component={AddList} />
             <Route exact path="/users/:userId/edit" component={EditUser} />

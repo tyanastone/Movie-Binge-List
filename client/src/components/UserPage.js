@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
-import add from "../Images/addbutton.png";
-import deleteButton from "../Images/deletebutton.png";
+import add from "../Images/add.png";
+import deleteButton from "../Images/delete4.svg";
 import { Link } from "react-router-dom";
 import {  CardText, CardBody, CardLink,
     CardTitle, CardSubtitle } from 'reactstrap';
@@ -63,19 +63,18 @@ class UserPage extends Component {
   }
 
   handleCreateNewMovie = () => {
-    const userId = this.props.match.params.userId;
+    const userId = this.props.match.params.userId
     const payload = {
-      name: "Movie Title",
-      image: "Movie Image",
-      year: "Movie Year",
-      description: "Movie Description"
-    };
+      image: 'picture',
+      name: 'movie name',
+     
+    }
     axios.post(`/api/users/${userId}/movies`, payload).then(res => {
-      const newMovie = res.data;
-      const newStateMovies = [...this.state.movies, newMovie];
-      this.setState({ movies: newStateMovies });
-    });
-  };
+      const newMovie = res.data
+      const newStateMovies = [...this.state.movies, newMovie]
+      this.setState({ movies: newStateMovies })
+    })
+  }
 
   handleDelete = movieId => {
     // some unique value
@@ -126,7 +125,7 @@ class UserPage extends Component {
         {/* <button onClick={EditUser}>Edit User</button> */}
         <h1>{this.state.user.username}'s Movie Page</h1>
         <NewMovieButton onClick={this.handleCreateNewMovie}>
-          New Movie
+         <Link to={`/users/${userId}/newMovie`}> New Movie</Link>
         </NewMovieButton>
 
         <IdeasContainerStyle>
