@@ -3,7 +3,7 @@ import axios from "axios";
 import styled from "styled-components";
 import add from "../Images/addbutton.png";
 import deleteButton from "../Images/deletebutton.png";
-
+import { Link } from "react-router-dom";
 import {  CardText, CardBody, CardLink,
     CardTitle, CardSubtitle } from 'reactstrap';
 
@@ -148,7 +148,7 @@ class UserPage extends Component {
         <img width="300" height="300" src={movie.image} alt="Card image cap" />
         <CardBody>
                       <CardText></CardText>
-           <CardLink href="#">Card Link</CardLink> 
+           
            <CardLink href="#">  <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle
           tag="span"
@@ -156,16 +156,17 @@ class UserPage extends Component {
           data-toggle="dropdown"
           aria-expanded={this.state.dropdownOpen}
         >
-           <img src={add} alt="addbutton" width="50" /> <img src={deleteButton} onClick={deleteMovie} alt="deletebutton" width="50" />
+           <img src={add} alt="addbutton" width="50" height="30" /> <img src={deleteButton} onClick={deleteMovie} alt="deletebutton" width="50" height="30"/>
         </DropdownToggle>
         <DropdownMenu>
-          <div onClick={this.toggle}>Want to Watch</div>
-          <div onClick={this.toggle}>Currently Watched</div>
-          <div onClick={this.toggle}>Already Watched</div>
-          <div onClick={this.toggle}>Create New List</div>
+          <Link to="/lists"><div onClick={this.toggle}>Want to Watch</div></Link>
+          <Link to="/lists"><div onClick={this.toggle}>Currently Watched</div></Link>
+          <Link to="/lists"><div onClick={this.toggle}>Already Watched</div></Link>
+          <Link to="/lists"><div onClick={this.toggle}>Create New List</div></Link>
         </DropdownMenu>
       </Dropdown> </CardLink>
-        </CardBody>
+                  </CardBody>
+                 
                         
                         </StyledCard>  
               
