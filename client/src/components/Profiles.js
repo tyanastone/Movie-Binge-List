@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import NavBar from "./Navbar";
 import "../index.css";
+import edit from '../Images/edit3.png'
 import styled from "styled-components";
 // import EditUser from './EditUser';
 
@@ -49,9 +50,10 @@ class Profiles extends Component {
                   className="profilePic"
                 />
                 <br />
-                <button>
-                  <Link to={`/users/${user._id}/edit`}>Edit Profile</Link>
-                </button>
+                {/* <button> */}
+                  <Link to={`/users/${user._id}/edit`}><img src={edit} alt="deletebutton" width="50" height="30"/></Link>
+                {/* </button> */}
+                {/* <img src={deleteButton} alt="deletebutton" width="50" height="30"/> */}
               </div>
             </div>
           ))}

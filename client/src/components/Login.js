@@ -72,7 +72,7 @@ class Login extends Component {
           </div>
         ))}
 
-        <h3>Log In: </h3>
+        <h1 className="title">Log In: </h1>
 
         <form onSubmit={this.handleSubmit}>
           <div>

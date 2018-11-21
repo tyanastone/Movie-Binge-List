@@ -22,7 +22,7 @@ const NewMovieButton = styled.button`
   padding: 7.5px 5px;
 `;
 
-const IdeasContainerStyle = styled.div`
+const MoviesContainerStyle = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -129,7 +129,7 @@ class UserPage extends Component {
           New Movie
         </NewMovieButton>
        
-        <IdeasContainerStyle>
+        <MoviesContainerStyle>
           {this.state.movies.map(movie => {
             const deleteMovie = () => {
               return this.handleDelete(movie._id);
@@ -143,7 +143,7 @@ class UserPage extends Component {
                        
         <CardBody>
           <CardTitle>{movie.name}</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
+          <CardSubtitle>{movie.genre}</CardSubtitle>
         </CardBody>
         <img width="300" height="300" src={movie.image} alt="Card image cap" />
         <CardBody>
@@ -171,9 +171,10 @@ class UserPage extends Component {
                         </StyledCard>  
               
               </div>
+              
             );
           })}
-        </IdeasContainerStyle>
+        </MoviesContainerStyle>
               </div>
               
     );

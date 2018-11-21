@@ -63,7 +63,7 @@ class HomePage extends Component {
             <ul>
                 <li>Movies</li>
                 <li>Shows</li>
-                <li>Fun</li>
+                <li>Lists</li>
             </ul>
         </div>
     </div>
@@ -73,7 +73,7 @@ class HomePage extends Component {
                         <div className="clip-text">
                             {/* <h1>Login&raquo;</h1> */}
                        
-                        <Link to="/login">
+                            <Link to="/login" style={{textDecoration: 'none'}}>
                             Log In&raquo;</Link>   
             </div>
                     </div>

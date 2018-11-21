@@ -29,8 +29,8 @@ class NavBar extends Component {
   render() {
     return (
       <NavBarStyles id="nav-container" class="some-class">
-        <Link to="/">Binger.io</Link>
-        <div className="right">
+        <Link to="/" className="title">Binger.io</Link>
+        <div className="right title">
                 <Link to="/login">Login</Link>
                 <Link to="/profiles">Profiles</Link>
                 

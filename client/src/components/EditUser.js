@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import Navbar from '../components/Navbar';
 class EditUser extends Component {
     state = {
         users: [],
@@ -40,8 +41,9 @@ class EditUser extends Component {
       };
     render() {
         return (
-            
-            <div>
+           
+          <div>
+             <Navbar />
                 <h1 className="title">Edit Your Profile Login</h1>
                 <form onSubmit={this.handleSubmit}>
           <div>
