@@ -1,6 +1,6 @@
 # Binger.io
 
-Do you like to binge watch movies and tv shows and would like a way to keep up with all the films and tv shows you've watched or would like to watch?! Well no need to look any further Binger.io is here! Binger.io was created as a list app to keep track of movies/shows you want to watch or already watching. I came up with this idea because normally I keep a "mental list" of everything in my head, with words of wisdom from two of my classmates, I learned that I need to get things "out of my head". 
+Do you like to binge watch movies and tv shows and would like a way to keep up with all the films and tv shows you've watched or would like to watch?! Well no need to look any further Binger.io is here! Binger.io was created as a list app to keep track of movies/shows you want to watch, currently watching or already watched. I came up with this idea because normally I keep a "mental list" of everything in my head, but with words of wisdom from two of my classmates, I learned that I need to get things "out of my head"; and from there generated the idea of Binger.io!
 
 #### Project Description
 
