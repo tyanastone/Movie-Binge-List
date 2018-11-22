@@ -72,9 +72,9 @@ class HomePage extends Component {
                 <div className="buttonContainer">
                     <div className="wrapper">
                         <div className="clip-text">
-                            {/* <h1>Login&raquo;</h1> */}
+                         
                        
-                            <Link to="/login" style={{textDecoration: 'none', color: '#ffff9e'}}>
+                            <Link to="/login" style={{textDecoration: 'none', color: '#ffff9e' }}>
                             Log In&raquo;</Link>   
             </div>
                     </div>

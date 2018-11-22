@@ -2,13 +2,6 @@
     font-family: 'Lobster', cursive;
 }
 
-/* .homeTitle{
-    font-family: 'Monoton', cursive;
- } */
-/* .contentContainer{
-    background-image: url('../src/Images/moviecollage.jpg');
-background-size: cover;
- } */
 
 .static {
     float: left;
@@ -93,10 +86,10 @@ ul li {
 
 .clip-text {
     margin-top: 4em;
-    /* margin-left: -100px; */
+    
     padding: 0.3em;
     font-size: 3em;
-    /* border: solid; */
+    
     z-index: 1;
     font-family: 'Oswald';
     text-align: center;
@@ -106,7 +99,7 @@ ul li {
     background-position: bottom;
     background-size: cover;
     -webkit-background-clip: text;
-    /* -webkit-text-fill-color: transparent; */
+    
     transition: 2s ease all;
 }
 
@@ -147,11 +140,7 @@ ul li {
     border-radius: 25px;
 }
 
-/* .userContainer{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: row;
-    } */
+
 .wordContainer {
     position: absolute;
     margin: auto;

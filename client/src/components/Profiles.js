@@ -5,7 +5,7 @@ import NavBar from "./Navbar";
 import "../index.css";
 import edit from '../Images/edit3.png'
 import styled from "styled-components";
-// import EditUser from './EditUser';
+
 
 const StyledCard = styled.div`
   display: flex;
@@ -50,10 +50,9 @@ class Profiles extends Component {
                   className="profilePic"
                 />
                 <br />
-                {/* <button> */}
-                  <Link to={`/users/${user._id}/edit`}><img src={edit} alt="deletebutton" width="50" height="30"/></Link>
-                {/* </button> */}
-                {/* <img src={deleteButton} alt="deletebutton" width="50" height="30"/> */}
+          
+                  <Link to={`/users/${user._id}/edit`}><img src={edit} alt="editbutton" width="50" height="30"/></Link>
+               
               </div>
             </div>
           ))}

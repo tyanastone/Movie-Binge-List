@@ -1,5 +1,5 @@
 const User = require('../models/User')
-// const Movie = require('../models/Movie')
+
 
 const userController = {
     index: (req, res) => {
