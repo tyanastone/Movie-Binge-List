@@ -1,5 +1,5 @@
-const User = require('../models/User')
-const Movie = require('../models/Movie')
+const User = require('../Models/User')
+const Movie = require('../Models/Movie')
 
 
 
