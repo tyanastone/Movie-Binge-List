@@ -25,6 +25,14 @@ const movieController = {
                 res.send(200)
             })
     },
+        update: (req, res) => {
+        let movieId = req.params.movieId
+        Idea.findByIdAndUpdate(movieId, req.body, { new: true })
+            .then((updatedMovie) => {
+                updatedMovie.save()
+                res.send(updatedMovie)
+            })
+    } ,
     create: (req, res) => {
         let userId = req.params.userId
         User.findById(userId)

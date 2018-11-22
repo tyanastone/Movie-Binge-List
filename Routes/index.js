@@ -17,7 +17,7 @@ router.delete('/api/users/:userId', userController.delete)
 router.get('/api/users/:userId/movie', movieController.index)
 router.get('/api/movie/:movieId', movieController.show)
 router.delete('/api/movie/:movieId', movieController.delete)
-// router.patch('/api/movie/:movieId', ideasController.update)
+router.patch('/api/movie/:movieId', movieController.update)
 router.post('/api/users/:userId/movies', movieController.create)
 
 

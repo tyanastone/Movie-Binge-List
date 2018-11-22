@@ -38,10 +38,10 @@ class NewMovie extends Component {
     console.log(this.props.match.params.userId)
     // make post request to our api to create new pikmin
 
-    axios.post(`/api/users/${movieId}/movies`, this.state.newMovie)
+    axios.post(`/api/users/${userId}/movies`, this.state.newMovie)
     //post this new pikmin to this specific user
       .then(res => {
-        this.props.history.push(`/users/${movieId}`)
+        this.props.history.push(`/users/${userId}`)
       })
       .catch(err => {
         console.log(err);
