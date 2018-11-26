@@ -10,7 +10,7 @@ Do you like to binge watch movies and tv shows and would like a way to keep up w
 ![Image of ERD](client/src/Images/ERD.png)
 
 #### Wireframe
-![Image of Wireframe](client/src/Images/WireFrame1.png)
+
 ![Image of Wireframe](client/src/Images/WireFrame2.png)
 ![Image of Wireframe](client/src/Images/WireFrame3.png)
 ![Image of Wireframe](client/src/Images/WireFrame4.png)
