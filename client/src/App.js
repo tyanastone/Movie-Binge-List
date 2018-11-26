@@ -8,7 +8,7 @@ import UserPage from "../src/components/UserPage";
 import Profiles from "../src/components/Profiles";
 import ListPage from "../src/components/ListPage";
 // import NavBar from "./components/Navbar";
-import AddList from '../src/components/AddList';
+
 import EditUser from '../src/components/EditUser';
 // import { createGlobalStyle } from 'styled-components'
 import styled from 'styled-components';
